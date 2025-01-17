@@ -1,0 +1,27 @@
+﻿@model E_Recrutement.Models.Offer
+
+@{
+    ViewData["Title"] = "Delete Offer";
+}
+
+<h1>Delete Offer</h1>
+
+<h3>Are you sure to delete this Offer ?</h3>
+<div>
+    <h4>@Model.Position</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Recruiter</dt>
+        <dd class="col-sm-10">@Model.recruiterId</dd>
+        <dt class="col-sm-2">Constract Type</dt>
+        <dd class="col-sm-10">@Model.ContractType</dd>
+        <dt class="col-sm-2">Salary</dt>
+        <dd class="col-sm-10">@Model.Salary</dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

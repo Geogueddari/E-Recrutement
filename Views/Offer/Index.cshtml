@@ -1,0 +1,45 @@
+﻿@model IEnumerable<E_Recrutement.Models.Offer>
+
+@{
+    ViewData["Title"] = "Offers List";
+}
+
+<h1>Offers List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create Offer</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Recruiter</th>
+            <th>Contract Type</th>
+            <th>Sector</th>
+            <th>Profile</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.recruiterId</td>
+                <td>@item.ContractType</td>
+                <td>@item.Sector</td>
+                <td>@item.Profile</td>
+                <td>@item.Position</td>
+                <td>@item.Salary</td>
+                <td>
+                    <a asp-action="Create" asp-route-id="@item.Id" class="btn btn-info btn-sm">Create</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
