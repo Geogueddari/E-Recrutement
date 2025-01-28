@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_Recrutement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250115153723_mappingModels")]
-    partial class mappingModels
+    [Migration("20250128170915_first-migration")]
+    partial class firstmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

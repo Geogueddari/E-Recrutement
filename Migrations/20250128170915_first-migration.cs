@@ -7,7 +7,7 @@
 namespace E_Recrutement.Migrations
 {
     /// <inheritdoc />
-    public partial class mappingModels : Migration
+    public partial class firstmigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
