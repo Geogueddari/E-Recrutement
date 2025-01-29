@@ -1,78 +1,173 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<div class="container mt-5">
-    <h1 class="text-center">@ViewData["Title"]</h1>
-    <p class="text-center text-muted">We value your privacy and are committed to protecting your personal information.</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <div class="card">
+<div class="container py-4">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary mb-3">@ViewData["Title"]</h1>
+        <p class="lead text-muted">
+            <i class="bi bi-lock-fill me-2"></i>We value your privacy and are committed to protecting your personal information.
+        </p>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-primary border-2 rounded-3">
+        <div class="card-header bg-primary text-white">
+            <h2 class="h5 mb-0"><i class="bi bi-collection-fill me-2"></i>Information Collected</h2>
+        </div>
         <div class="card-body">
-            <h2>1. Information Collected</h2>
             <p>We collect information when you register on our site, apply for job offers, or interact with our application. The information we collect may include, but is not limited to:</p>
-            <ul>
-                <li>Full name, email address, phone number</li>
-                <li>Resume (CV), cover letter, and other professional information</li>
-                <li>Application history</li>
+            <ul class="list-unstyled ms-3">
+                <li class="mb-2">
+                    <i class="bi bi-person-circle text-primary me-2"></i>
+                    Full name, email address, phone number
+                </li>
+                <li class="mb-2">
+                    <i class="bi bi-file-earmark-text text-primary me-2"></i>
+                    Resume (CV), cover letter, and other professional information
+                </li>
+                <li>
+                    <i class="bi bi-clock-history text-primary me-2"></i>
+                    Application history
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card shadow-sm mb-4 border-success border-2 rounded-3">
+        <div class="card-header bg-success text-white">
+            <h2 class="h5 mb-0"><i class="bi bi-gear-fill me-2"></i>Use of Information</h2>
+        </div>
         <div class="card-body">
-            <h2>2. Use of Information</h2>
             <p>The information we collect is used to:</p>
-            <ul>
-                <li>Process your job applications</li>
-                <li>Improve the features of our platform</li>
-                <li>Communicate with you regarding job offers or updates</li>
-                <li>Ensure the security and integrity of our site</li>
-            </ul>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="alert alert-light border">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="bi bi-check2-square text-success me-2"></i>
+                                Process your job applications
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check2-square text-success me-2"></i>
+                                Improve the features of our platform
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-light border">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <i class="bi bi-check2-square text-success me-2"></i>
+                                Communicate with you regarding job offers or updates
+                            </li>
+                            <li>
+                                <i class="bi bi-check2-square text-success me-2"></i>
+                                Ensure the security and integrity of our site
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card shadow-sm mb-4 border-warning border-2 rounded-3">
+        <div class="card-header bg-warning text-dark">
+            <h2 class="h5 mb-0"><i class="bi bi-share-fill me-2"></i>Sharing of Information</h2>
+        </div>
         <div class="card-body">
-            <h2>3. Sharing of Information</h2>
             <p>We do not sell, rent, or share your personal information with third parties without your consent, except in the following cases:</p>
-            <ul>
-                <li>When necessary to process your application with recruiters or partner companies.</li>
-                <li>When required by law or in response to a request from competent authorities.</li>
+            <ul class="list-unstyled ms-3">
+                <li class="mb-2">
+                    <i class="bi bi-briefcase text-warning me-2"></i>
+                    When necessary to process your application with recruiters or partner companies
+                </li>
+                <li>
+                    <i class="bi bi-shield-exclamation text-warning me-2"></i>
+                    When required by law or in response to a request from competent authorities
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card shadow-sm mb-4 border-info border-2 rounded-3">
+        <div class="card-header bg-info text-white">
+            <h2 class="h5 mb-0"><i class="bi bi-cookie me-2"></i>Cookies</h2>
+        </div>
         <div class="card-body">
-            <h2>4. Cookies</h2>
             <p>We use cookies to enhance your browsing experience on our site. A cookie is a small file placed on your device to track browsing activities. You can configure your browser to reject cookies, but this may limit some site features.</p>
+            <div class="alert alert-info d-inline-flex align-items-center">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                Manage cookies in your browser settings
+            </div>
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card shadow-sm mb-4 border-danger border-2 rounded-3">
+        <div class="card-header bg-danger text-white">
+            <h2 class="h5 mb-0"><i class="bi bi-shield-lock-fill me-2"></i>Data Security</h2>
+        </div>
         <div class="card-body">
-            <h2>5. Data Security</h2>
             <p>We take appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of internet transmission is completely secure, and we cannot guarantee the absolute security of your information.</p>
+            <div class="progress mb-3">
+                <div class="progress-bar bg-danger progress-bar-striped" style="width: 85%">Security Level: 85%</div>
+            </div>
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card shadow-sm mb-4 border-dark border-2 rounded-3">
+        <div class="card-header bg-dark text-white">
+            <h2 class="h5 mb-0"><i class="bi bi-person-check-fill me-2"></i>Your Rights</h2>
+        </div>
         <div class="card-body">
-            <h2>6. Your Rights</h2>
             <p>Under data protection laws, you have the right to:</p>
-            <ul>
-                <li>Access your personal information</li>
-                <li>Request correction or deletion of your personal information</li>
-                <li>Withdraw your consent at any time, without affecting the legality of processing carried out before such withdrawal</li>
+            <ul class="list-unstyled ms-3">
+                <li class="mb-2">
+                    <i class="bi bi-eye-fill text-dark me-2"></i>
+                    Access your personal information
+                </li>
+                <li class="mb-2">
+                    <i class="bi bi-pencil-square text-dark me-2"></i>
+                    Request correction or deletion of your personal information
+                </li>
+                <li>
+                    <i class="bi bi-x-circle-fill text-dark me-2"></i>
+                    Withdraw your consent at any time
+                </li>
             </ul>
-            <p>To exercise your rights, please contact us at: <strong>contact@e-recruitment.com</strong></p>
+            <div class="alert alert-dark mt-3">
+                Contact us at: 
+                <a href="mailto:contact@e-recruitment.com" class="text-decoration-none">
+                    <i class="bi bi-envelope-at-fill me-2"></i>contact@e-recruitment.com
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="card mt-4">
+    <div class="card shadow-sm border-secondary border-2 rounded-3">
+        <div class="card-header bg-secondary text-white">
+            <h2 class="h5 mb-0"><i class="bi bi-clock-history me-2"></i>Policy Updates</h2>
+        </div>
         <div class="card-body">
-            <h2>7. Changes to This Privacy Policy</h2>
             <p>We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page, with the date of the latest update at the top of the page.</p>
-            <p><strong>Last updated: January 2025</strong></p>
+            <div class="badge bg-primary fs-6">
+                <i class="bi bi-calendar-check me-2"></i>
+                Last updated: January 2025
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+    .card {
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .progress-bar {
+        transition: width 1s ease-in-out;
+    }
+</style>
