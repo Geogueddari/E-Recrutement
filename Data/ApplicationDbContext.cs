@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace E_Recrutement.Models
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -14,6 +16,8 @@ namespace E_Recrutement.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Recruiter>().HasData(
                 new Recruiter { Id = 1, Name = "Recruiter A", Phone = "123456789", Email = "recruiterA@example.com" },
                 new Recruiter { Id = 2, Name = "Recruiter B", Phone = "987654321", Email = "recruiterB@example.com" }
