@@ -22,5 +22,38 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
 }
+
+#carouselExampleIndicators .carousel-inner {
+    max-height: 300px; /* Ajustez cette valeur selon vos besoins */
+}
+
+#carouselExampleIndicators .carousel-item img {
+    object-fit: cover; /* Cela permet de maintenir les proportions tout en remplissant l'espace */
+    height: 100%; /* Garantir que l'image couvre toute la hauteur du carousel */
+}
+
+
+html::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #898a8b;
+    border-radius: 3px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #0dcaf0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    html::-webkit-scrollbar-thumb:hover {
+        background-color: #007bff;
+    }

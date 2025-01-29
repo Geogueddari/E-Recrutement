@@ -3,63 +3,101 @@
 }
 
 <div class="container mt-4">
-    <!-- ✅ Carrousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="Random Image 1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="Random Image 2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=3" class="d-block w-100" alt="Random Image 3">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-
     <!-- ✅ Section News -->
     <div class="mt-5">
         <h2 class="text-center">Latest News</h2>
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="~/images/news1.jpg" class="card-img-top" alt="News 1">
-                    <div class="card-body">
-                        <h5 class="card-title">New Job Opportunities</h5>
-                        <p class="card-text">Discover the latest job openings in various fields.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+            <div class="col-md-8">
+                <!-- Contenu principal : Actualités -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="~/images/news1.jpg" class="card-img-top" alt="News 1">
+                            <div class="card-body">
+                                <h5 class="card-title">New Job Opportunities</h5>
+                                <p class="card-text">Discover the latest job openings in various fields.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="~/images/news2.jpg" class="card-img-top" alt="News 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Tech Trends in Recruitment</h5>
+                                <p class="card-text">How AI is transforming the hiring process.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="~/images/news3.jpg" class="card-img-top" alt="News 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Interview Tips</h5>
+                                <p class="card-text">Master your next job interview with these key strategies.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="~/images/news2.jpg" class="card-img-top" alt="News 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Tech Trends in Recruitment</h5>
-                        <p class="card-text">How AI is transforming the hiring process.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
+            <div class="col-md-4 position-sticky top-0">
+                <!-- ✅ Section Annonces Fixes -->
+                <div class="card elevated rounded border mt-4 bg-light w-100">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">ANNOUNCEMENTS</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>New Vacant Positions at African Union</p>
+                            <p>African Union Has Advertised The Vacant Positions And Competent Nationals Are Encouraged To Apply.</p>
+                            <p>For more details click <a href="#">here</a></p>
+                        </div>
+                    </div 
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="~/images/news3.jpg" class="card-img-top" alt="News 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Interview Tips</h5>
-                        <p class="card-text">Master your next job interview with these key strategies.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+
+                <div class="card elevated rounded border mt-4 bg-light">
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5 class="card-title">APPLICATION GUIDELINES</h5>
+                        </div>
+                        <div class="card-body">
+                            <ol>
+                                <li>
+                                    Registration
+                                    <ul>
+                                        <li>Create an account to access this application</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Login
+                                    <ul>
+                                        <li>Login into the system</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Complete your profile
+                                    <ul>
+                                        <li>Check your profile and update accordingly.</li>
+                                        <li>Fill in all the necessary information in the profile section. (Higher Education, Languages and References are mandatory fields).</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Apply for a job
+                                    <ul>
+                                        <li>Read carefully the Job description, Job Profile and Skills required for the respective positions before proceeding to apply.</li>
+                                        <li>Apply for a job by clicking on the Apply Now button.</li>
+                                        <li>Once shortlisting completed, you will receive an email notification informing you of your application status.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="card-footer text-center">
+                            <p>For any support, contact our support team at:</p>
+                            <p>Call us: 9997</p>
+                            <p>Text us: 0785569363 (via WhatsApp for recruitment inquiries)</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,26 +106,4 @@
 </div>
 
 <!-- ✅ Footer avec Map et Contacts -->
-<footer class="bg-dark text-white mt-5 p-4 text-center">
-    <div class="container">
-        <div class="row">
-            <!-- Localisation -->
-            <div class="col-md-6">
-                <h5>Our Location</h5>
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.95565131531854!3d-37.81732397975153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1c0c6c7%3A0xf4c23a0c7a3c4e0!2sMelbourne%20CBD%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2sfr!4v1617844285125!5m2!1sen!2sfr"
-                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
-                </div>
-            </div>
 
-            <!-- Contacts -->
-            <div class="col-md-6">
-                <h5>Contact Us</h5>
-                <p><i class="bi bi-telephone-fill"></i> +212 600 000 000</p>
-                <p><i class="bi bi-envelope-fill"></i> contact@erecruitment.com</p>
-                <p><i class="bi bi-geo-alt-fill"></i> 123 Street, Casablanca, Morocco</p>
-            </div>
-        </div>
-    </div>
-</footer>
