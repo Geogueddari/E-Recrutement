@@ -9,13 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/E_Recrutement.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body style=" background: linear-gradient(45deg, #ffffff, #fdfdfd, #fcfcfc, #fbfbfb, #fafafa);">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-light border-bottom box-shadow mb-3 fixed-top shadow" style=" background: linear-gradient(45deg, #dfe9f3, #c2d3df, #a6bdcc, #8aa7b8, #6e91a5);">
             <div class="container-fluid">
                 <!-- Logo et nom -->
                 <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
@@ -46,7 +47,7 @@
                     <!-- Barre de recherche -->
                     <form class="d-flex mx-auto" role="search">
                         <input class="form-control me-2 w-90" type="search" placeholder="Search Offer" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">
+                        <button class="btn btn-primary " type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -58,7 +59,7 @@
         </nav>
     </header>
 
-    <div class="container" style="margin-top: 90px;padding:0;max-width: 100% !important;">
+    <div class="container" style="margin-top: 75px;padding:0;max-width: 100% !important;">
         <!-- ✅ Carrousel -->
         @if (Context.Request.Path == "/")
         {
@@ -71,12 +72,27 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="Random Image 1">
+                        <div class="carousel-caption position-absolute start-50 translate-middle-x text-center" style="top: 5%;">
+                            <h4>La digitalisation du recrutement s’accélère !</h4>
+                            <p>💼 Les entreprises adoptent de plus en plus les plateformes d’e-recrutement pour optimiser leurs processus d’embauche. Découvrez les dernières tendances et innovations..</p>
+                            <a href="#" class="btn btn-primary">Discover</a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="Random Image 2">
+                        <div class="carousel-caption position-absolute start-50 translate-middle-x text-center" style="top: 5%;">
+                            <h4>L'IA au service du recrutement</h4>
+                            <p>🤖 Intelligence artificielle et machine learning révolutionnent la sélection des candidats ! Comment ces technologies améliorent-elles l'efficacité des recruteurs ?.</p>
+                            <a href="#" class="btn btn-primary">Discover</a>
+                        </div>
                     </div>
                     <div class="carousel-item">
                         <img src="https://picsum.photos/1200/500?random=3" class="d-block w-100" alt="Random Image 3">
+                        <div class="carousel-caption position-absolute start-50 translate-middle-x text-center" style="top: 5%;">
+                            <h4>Le télétravail change les stratégies de recrutement</h4>
+                            <p>🏠 Avec l’essor du travail à distance, les entreprises élargissent leur champ de recherche de talents. Comment s’adaptent-elles à cette nouvelle réalité ?.</p>
+                            <a href="#" class="btn btn-primary">Discover</a>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -86,6 +102,8 @@
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
+
+
         }
         <main role="main" class="w-100">
             @RenderBody()
@@ -95,28 +113,58 @@
     {
         <footer class="bg-dark text-white mt-5 p-4 text-center w-100">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-start justify-content-between">
                     <!-- Localisation -->
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <h5>Our Location</h5>
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.95565131531854!3d-37.81732397975153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1c0c6c7%3A0xf4c23a0c7a3c4e0!2sMelbourne%20CBD%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2sfr!4v1617844285125!5m2!1sen!2sfr"
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26538.195514936528!2d-7.645503268678751!3d33.57311038394645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd02e56b6a71%3A0x5b5e4f8f0ed7c6!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sfr!4v1700000000000"
                                     width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
                             </iframe>
                         </div>
                     </div>
 
                     <!-- Contacts -->
-                    <div class="col-md-6">
+                    <div class="col-md-3 text-start">
                         <h5>Contact Us</h5>
                         <p><i class="bi bi-telephone-fill"></i> +212 600 000 000</p>
                         <p><i class="bi bi-envelope-fill"></i> contact@erecruitment.com</p>
-                        <p><i class="bi bi-geo-alt-fill"></i> 123 Street, Casablanca, Morocco</p>
+                        <p><i class="bi bi-geo-alt-fill"></i> Casablanca, Morocco</p>
+
+                        <!-- Réseaux Sociaux -->
+                        <div class="mt-3">
+                            <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                            <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                            <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-github fs-4"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Profils WhatsApp -->
+                    <div class="col-md-4">
+                        <h5>Contact on WhatsApp</h5>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://wa.me/212600000001" target="_blank" class="text-white text-decoration-none">
+                                <img src="~/assets/abdeljabar.jpg" class="rounded-circle border border-light" alt="Profile 1" style="width: 100px; height: auto;">
+                                <p class="mt-2">Abdeljabbar Elgaddari</p>
+                            </a>
+                            <a href="https://wa.me/212600000002" target="_blank" class="text-white text-decoration-none">
+                                <img src="~/assets/abdeljabar.jpg" class="rounded-circle border border-light" alt="Profile 2" style="width: 100px; height: auto;">
+                                <p class="mt-2">Abdellah Chbib</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
+
     }
+    <button class="btn btn-danger fixed-button-right" id="showMessageButton">
+        <i class="fas fa-robot"></i>
+    </button>
+    <button class="btn btn-success fixed-button-left" id="whatsappButton">
+        <i class="fab fa-whatsapp"></i> <!-- Icône WhatsApp -->
+    </button>
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
