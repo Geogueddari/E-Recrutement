@@ -15,51 +15,61 @@
     <link rel="stylesheet" href="~/E_Recrutement.styles.css" asp-append-version="true" />
 </head>
 <body style=" background: linear-gradient(45deg, #ffffff, #fdfdfd, #fcfcfc, #fbfbfb, #fafafa);">
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-light border-bottom box-shadow mb-3 fixed-top shadow" style=" background: linear-gradient(45deg, #dfe9f3, #c2d3df, #a6bdcc, #8aa7b8, #6e91a5);">
-            <div class="container-fluid">
-                <!-- Logo et nom -->
-                <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/assets/AppLogo.png" alt="AppLogo" style="width: 50px; height: auto;" class="me-1"/>
-                    <span class="fw-bold text-primary" style="font-size:25px;">E-Recruitment</span>
-                </a>
+    @if (Context.Request.Path != "/Identity/Account/Register")
+    {
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-light border-bottom box-shadow mb-3 fixed-top shadow" style=" background: linear-gradient(45deg, #dfe9f3, #c2d3df, #a6bdcc, #8aa7b8, #6e91a5);">
+                <div class="container-fluid">
+                    <!-- Logo et nom -->
+                    <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/assets/AppLogo.png" alt="AppLogo" style="width: 50px; height: auto;" class="me-1" />
+                        <span class="fw-bold text-primary" style="font-size:25px;">E-Recruitment</span>
+                    </a>
 
-                <!-- Bouton toggle pour mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <!-- Bouton toggle pour mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <!-- Menu de gauche -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Offer" asp-action="Index">Offers</a>
-                        </li>
-                    </ul>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <!-- Menu de gauche -->
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Offer" asp-action="Index">Offers</a>
+                            </li>
+                        </ul>
 
-                    <!-- Barre de recherche -->
-                    <form class="d-flex mx-auto" role="search">
-                        <input class="form-control me-2 w-90" type="search" placeholder="Search Offer" aria-label="Search">
-                        <button class="btn btn-primary " type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
+                        <!-- Barre de recherche -->
+                        <form class="d-flex mx-auto" role="search">
+                            <input class="form-control me-2 w-90" type="search" placeholder="Search Offer" aria-label="Search">
+                            <button class="btn btn-primary " type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
 
-                    <!-- Menu de droite (login/register) -->
-                    <partial name="_LoginPartial" />
+                        <!-- Menu de droite (login/register) -->
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+    }
 
-    <div class="container" style="margin-top: 75px;padding:0;max-width: 100% !important;">
+    @{
+        int margin = 75;
+        if (Context.Request.Path == "/Identity/Account/Register")
+        {
+            margin = 0;
+        }
+    }
+    <div class="container" style="margin-top: @margin px;padding:0;max-width: 100% !important;">
         <!-- ✅ Carrousel -->
         @if (Context.Request.Path == "/")
         {
@@ -109,6 +119,7 @@
             @RenderBody()
         </main>
     </div>
+
     @if (Context.Request.Path == "/" || Context.Request.Path == "/Home/Privacy")
     {
         <footer class="bg-dark text-white mt-5 p-4 text-center w-100">
