@@ -255,6 +255,15 @@ shadow {
         transform: translateY(-10px);
     }
 }
+.user-avatar {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
 
-
+.user-avatar:hover {
+    transform: scale(1.1);
+    text-decoration: none;
+}
 
