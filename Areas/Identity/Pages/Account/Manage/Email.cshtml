@@ -29,11 +29,23 @@
     .btn-hover:hover {
         transform: translateY(-3px);
     }
+
+    .email-card{
+        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+        backdrop-filter: blur(2px);
+        border:1px solid white;
+    }
+
+
+
+
 </style>
 
 <div class="auth-container">
-    <div class="auth-card login">
-        <h3 class="text-center mb-4">@ViewData["Title"]</h3>
+    <div class="auth-card email-card" data-tilt>
+        <h3 class="text-center mb-4 text-white">@ViewData["Title"]</h3>
         <partial name="_StatusMessage" for="StatusMessage" />
 
         <form id="email-form" method="post">
@@ -61,7 +73,7 @@
             }
 
             <div class="mb-3">
-                <label class="form-label">New Email Address</label>
+                <label class="form-label text-white">New Email Address</label>
                 <input asp-for="Input.NewEmail" class="form-control" placeholder="Enter new email" />
                 <span asp-validation-for="Input.NewEmail" class="text-danger small"></span>
             </div>
