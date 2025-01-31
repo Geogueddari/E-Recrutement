@@ -4,20 +4,31 @@
     ViewData["Title"] = "Register confirmation";
 }
 
-<h1>@ViewData["Title"]</h1>
+<a href="/" class="btn btn-light shadow rounded-circle position-fixed top-0 start-0 m-3 d-flex align-items-center justify-content-center"
+   style="width: 50px; height: 50px; z-index: 1050;">
+    <i class="bi bi-house-door-fill fs-4"></i>
+</a>
+
+<div id="particles-js"></div>
+
+<div class="flex mt-5 mb-3 ">
+    <img src="~/assets/AppLogo.png" alt="AppLogo" style="width: 100px; height: auto;" class="me-1" />
+    <h1 class="fw-bold text-white" style="font-size:25px;">@ViewData["Title"]</h1>
+</div>
 @{
     if (@Model.DisplayConfirmAccountLink)
     {
-<p>
-    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
-    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
-</p>
+        <p class="text-center mt-4">
+            <a id="confirm-link" href="@Model.EmailConfirmationUrl">✅ Confirm Your Account</a>
+        </p>
     }
     else
     {
-<p>
-        Please check your email to confirm your account.
-</p>
+        <div class="email-box mt-4">
+            <i class="bi bi-envelope-fill email-icon"></i>
+            <p class="mt-2">📩 Please check your email to confirm your account.</p>
+        </div>
+
     }
 }
 

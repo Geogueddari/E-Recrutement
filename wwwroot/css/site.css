@@ -138,7 +138,7 @@ shadow {
 }
 
 
-/*------------------------------- forgot password confirmation*/
+/*------------------------------- forgot password confirmation---------------------------------------------*/
 
 .email-animation-container {
     position: relative;
@@ -161,9 +161,9 @@ shadow {
     color: blue;
 }
 
-.email-icon {
+.email-icon-forgot {
     font-size: 30px;
-    color: #667eea;
+    color: #ffdd57;
     position: relative;
     animation: sendEmail 2s infinite ease-in-out;
 }
@@ -184,3 +184,77 @@ shadow {
         opacity: 0;
     }
 }
+
+
+/*------------------------------- Register Confirmation--------------------------------*/
+
+#confirm-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 1.5s infinite;
+}
+
+    #confirm-link:hover {
+        background: linear-gradient(135deg, #764ba2, #667eea);
+        transform: scale(1.05);
+    }
+
+/* Animation pulsation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(118, 75, 162, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(118, 75, 162, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(118, 75, 162, 0.5);
+    }
+}
+
+
+.email-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+    .email-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+    }
+
+.email-icon {
+    font-size: 40px;
+    color: #ffdd57;
+    animation: bounce 1.5s infinite;
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+

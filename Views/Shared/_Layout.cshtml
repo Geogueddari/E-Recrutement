@@ -20,6 +20,8 @@
     && Context.Request.Path != "/Identity/Account/Login" 
     && Context.Request.Path != "/Identity/Account/ForgotPassword"
     && Context.Request.Path != "/Identity/Account/ForgotPasswordConfirmation"
+    && Context.Request.Path != "/Identity/Account/RegisterConfirmation"
+    && Context.Request.Path != "/Identity/Account/ConfirmEmail"
     )
     {
         <header>
@@ -73,6 +75,8 @@
         || Context.Request.Path == "/Identity/Account/Login" 
         || Context.Request.Path == "/Identity/Account/ForgotPassword"
         || Context.Request.Path == "/Identity/Account/ForgotPasswordConfirmation"
+        || Context.Request.Path == "/Identity/Account/RegisterConfirmation"
+        || Context.Request.Path == "/Identity/Account/ConfirmEmail"
         )
         {
             margin = 0;

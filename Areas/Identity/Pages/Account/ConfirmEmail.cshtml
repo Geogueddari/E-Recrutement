@@ -4,5 +4,16 @@
     ViewData["Title"] = "Confirm email";
 }
 
-<h1>@ViewData["Title"]</h1>
+
+<div id="particles-js"></div>
+
+<div class="flex my-3">
+    <img src="~/assets/AppLogo.png" alt="AppLogo" style="width: 100px; height: auto;" class="me-1" />
+    <h1 class="fw-bold text-white" style="font-size:25px;">@ViewData["Title"]</h1>
+</div>
+
+<a asp-page="/" class="btn  shadow rounded-circle  m-3 d-flex align-items-center justify-content-center"
+   style="width: 50px; height: 50px; z-index: 1050;background-color:greenyellow;">
+    <i class="bi bi-box-arrow-in-right fs-4 icon-login"></i>
+</a>
 <partial name="_StatusMessage" model="Model.StatusMessage" />
