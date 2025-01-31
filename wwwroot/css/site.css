@@ -267,3 +267,16 @@ shadow {
     text-decoration: none;
 }
 
+/*---------------------------------Manage------------------------------------*/
+
+.manage-item:hover {
+    background-color: #40464b;
+}
+.manage-item{
+    border-radius:3px;
+}
+.link-hover {
+    font-weight: bold !important;
+    font-size: 15px !important;
+}
+
