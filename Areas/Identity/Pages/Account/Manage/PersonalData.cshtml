@@ -5,23 +5,57 @@
     ViewData["ActivePage"] = ManageNavPages.PersonalData;
 }
 
-<h3>@ViewData["Title"]</h3>
+<div class="container py-5 d-flex justify-content-center align-items-center vh-100">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8"> <!-- Largeur augmentée -->
+            <div class="card border-0 shadow-lg"> <!-- Ajout d'une ombre plus visible -->
+                <div class="card-header bg-transparent border-bottom">
+                    <h3 class="mb-0">
+                        <i class="bi bi-person-lines-fill me-2 text-muted"></i>@ViewData["Title"]
+                    </h3>
+                </div>
+                
+                <div class="card-body p-4"> <!-- Plus de padding -->
+                    <div class="alert alert-warning py-3 small mb-4">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        <strong>Warning:</strong> Deleting data will permanently remove your account.
+                    </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
-        <p>
-            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
-        </p>
-        <form id="download-data" asp-page="DownloadPersonalData" method="post">
-            <button class="btn btn-primary" type="submit">Download</button>
-        </form>
-        <p>
-            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Delete</a>
-        </p>
+                    <p class="text-muted fs-5 mb-4">
+                        Manage your personal data below. You can download or permanently delete your information.
+                    </p>
+
+                    <div class="d-flex gap-3">
+                        <form id="download-data" asp-page="DownloadPersonalData" method="post" class="flex-grow-1">
+                            <button class="btn btn-outline-primary btn-lg w-100" type="submit">
+                                <i class="bi bi-download me-1"></i>Download
+                            </button>
+                        </form>
+                        
+                        <a id="delete" asp-page="DeletePersonalData" class="btn btn-outline-danger btn-lg flex-grow-1">
+                            <i class="bi bi-trash me-1"></i>Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+<style>
+    .card {
+        border-radius: 0.5rem;
+        transition: transform 0.2s;
+    }
+    .card-header {
+        background-color: #f8f9fa;
+    }
+    .alert-warning {
+        border-left: 3px solid #ffc107;
+    }
+</style>
