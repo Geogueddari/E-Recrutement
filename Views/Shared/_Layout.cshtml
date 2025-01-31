@@ -22,6 +22,7 @@
     && Context.Request.Path != "/Identity/Account/ForgotPasswordConfirmation"
     && Context.Request.Path != "/Identity/Account/RegisterConfirmation"
     && Context.Request.Path != "/Identity/Account/ConfirmEmail"
+    && !Context.Request.Path.StartsWithSegments("/Identity/Account/Manage")
     )
     {
         <header>
@@ -77,6 +78,7 @@
         || Context.Request.Path == "/Identity/Account/ForgotPasswordConfirmation"
         || Context.Request.Path == "/Identity/Account/RegisterConfirmation"
         || Context.Request.Path == "/Identity/Account/ConfirmEmail"
+        || Context.Request.Path.StartsWithSegments("/Identity/Account/Manage")
         )
         {
             margin = 0;
@@ -186,9 +188,13 @@
     <button class="btn btn-danger fixed-button-right" id="showMessageButton">
         <i class="fas fa-robot"></i>
     </button>
-    <button class="btn btn-success fixed-button-left" id="whatsappButton">
-        <i class="fab fa-whatsapp"></i> <!-- Icône WhatsApp -->
-    </button>
+    @if (!Context.Request.Path.StartsWithSegments("/Identity/Account/Manage"))
+    {
+        <button class="btn btn-success fixed-button-left" id="whatsappButton">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+    }
+    
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

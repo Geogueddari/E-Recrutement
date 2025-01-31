@@ -9,16 +9,12 @@
     }
 }
 
-<h1>Manage your account</h1>
-
-<div>
-    <h2>Change your account settings</h2>
-    <hr />
-    <div class="row">
+<div class="w-100 vh-100 ">
+    <div class="row w-100 ">
         <div class="col-md-3">
             <partial name="_ManageNav" />
         </div>
-        <div class="col-md-9">
+        <div class="col-md-9 vh-100 bg-warning">
             @RenderBody()
         </div>
     </div>
@@ -27,3 +23,6 @@
 @section Scripts {
     @RenderSection("Scripts", required: false)
 }
+
+
+
