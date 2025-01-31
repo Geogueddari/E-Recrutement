@@ -64,12 +64,12 @@
 
     @{
         int margin = 75;
-        if (Context.Request.Path == "/Identity/Account/Register")
+        if (Context.Request.Path == "/Identity/Account/Register" || Context.Request.Path == "/Identity/Account/Login")
         {
             margin = 0;
         }
     }
-    <div class="container" style="margin-top: @margin px;padding:0;max-width: 100% !important;">
+    <div class="container" style="margin-top:@($"{margin}px");padding:0;min-width: 100% !important;">
         <!-- ✅ Carrousel -->
         @if (Context.Request.Path == "/")
         {
