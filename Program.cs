@@ -13,6 +13,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 
+
+builder.Services.AddAuthentication().AddFacebook(option =>
+{
+    option.AppId = "4764046430487078";
+    option.AppSecret = "9aae5e96a71460da5bbc3e5d1405b076";
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
