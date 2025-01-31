@@ -136,3 +136,51 @@ shadow {
 .input{
     border-radius:20px;
 }
+
+
+/*------------------------------- forgot password confirmation*/
+
+.email-animation-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    overflow: hidden;
+}
+
+.email-animation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.user-icon, .server-icon {
+    font-size: 40px;
+    color: blue;
+}
+
+.email-icon {
+    font-size: 30px;
+    color: #667eea;
+    position: relative;
+    animation: sendEmail 2s infinite ease-in-out;
+}
+
+@keyframes sendEmail {
+    0% {
+        transform: translateX(40px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-40px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+}

@@ -40,8 +40,8 @@
             <button id="registerSubmit" type="submit" class="w-75 btn btn-lg btn-success input">Register</button>
         </form>
     </div>
-    <div class="external-login flex">
-        <section>
+    <div class="external-login">
+        <section class="w-100">
             <hr />
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) != 0)
@@ -64,7 +64,7 @@
                     </form>
                 }
             }
-            <p class="text-white">
+            <p class="text-white w-100 flex" style="flex-direction:row;">
                 Already have an account?
                 <a class="text-white" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log in</a>
             </p>

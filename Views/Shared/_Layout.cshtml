@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="~/E_Recrutement.styles.css" asp-append-version="true" />
 </head>
 <body style=" background: linear-gradient(45deg, #ffffff, #fdfdfd, #fcfcfc, #fbfbfb, #fafafa);">
-    @if (Context.Request.Path != "/Identity/Account/Register" && Context.Request.Path != "/Identity/Account/Login")
+    @if (Context.Request.Path != "/Identity/Account/Register" 
+    && Context.Request.Path != "/Identity/Account/Login" 
+    && Context.Request.Path != "/Identity/Account/ForgotPassword"
+    && Context.Request.Path != "/Identity/Account/ForgotPasswordConfirmation"
+    )
     {
         <header>
             <nav class="navbar navbar-expand-sm navbar-light border-bottom box-shadow mb-3 fixed-top shadow" style=" background: linear-gradient(45deg, #dfe9f3, #c2d3df, #a6bdcc, #8aa7b8, #6e91a5);">
@@ -65,7 +69,11 @@
 
     @{
         int margin = 75;
-        if (Context.Request.Path == "/Identity/Account/Register" || Context.Request.Path == "/Identity/Account/Login")
+        if (Context.Request.Path == "/Identity/Account/Register" 
+        || Context.Request.Path == "/Identity/Account/Login" 
+        || Context.Request.Path == "/Identity/Account/ForgotPassword"
+        || Context.Request.Path == "/Identity/Account/ForgotPasswordConfirmation"
+        )
         {
             margin = 0;
         }
