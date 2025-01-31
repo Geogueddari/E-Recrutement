@@ -45,15 +45,6 @@
         </a>
     </li>
 
-    @if (hasExternalLogins)
-    {
-        <li id="external-logins" class="nav-item manage-item">
-            <a id="external-login" class="fw-bold fs-15 text-white nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-page="./ExternalLogins">
-                <i class="bi bi-box-arrow-in-right fs-3 m-3"></i> External logins
-            </a>
-        </li>
-    }
-
     <li class="nav-item manage-item">
         <a class="fw-bold fs-15 text-white nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">
             <i class="bi bi-shield-lock fs-3 m-3"></i> Two-factor authentication
