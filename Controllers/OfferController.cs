@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using E_Recrutement.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace E_Recrutement.Controllers
 {
+    [Authorize(Roles = "Recruiter")]
     public class OfferController : Controller
     {
         private readonly ApplicationDbContext _db;
