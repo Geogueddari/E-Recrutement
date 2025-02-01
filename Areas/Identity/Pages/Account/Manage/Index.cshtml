@@ -5,22 +5,64 @@
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
-<h3>@ViewData["Title"]</h3>
-<partial name="_StatusMessage" for="StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
+<style>
+    body {
+        background: #f8f9fa;
+    }
+
+    .auth-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .auth-card {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .btn-hover {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .btn-hover:hover {
+            transform: translateY(-3px);
+        }
+
+    .profile-card {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+        backdrop-filter: blur(2px);
+        border: 1px solid white;
+    }
+</style>
+
+<div class="auth-container">
+    <div class="auth-card profile-card" data-tilt>
+        <h3 class="text-center mb-4 text-white">@ViewData["Title"]</h3>
+        <partial name="_StatusMessage" for="StatusMessage" />
+
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled />
                 <label asp-for="Username" class="form-label"></label>
             </div>
+
             <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
+                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number." />
                 <label asp-for="Input.PhoneNumber" class="form-label"></label>
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+
+            <button id="update-profile-button" type="submit" class="btn btn-primary w-100 btn-hover">Save</button>
         </form>
     </div>
 </div>
